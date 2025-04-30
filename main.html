@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Simple Portofolio</title>
+    <style>
+      /* CSS Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Global Styles */
+      body {
+        font-family: "Georgia", serif;
+        line-height: 1.6;
+        background-color: #f8f4e9; /* Creamy background */
+        color: #333;
+        padding: 0 20px;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* Typography */
+      h1,
+      h2,
+      h3 {
+        font-weight: normal;
+        margin-bottom: 1rem;
+        color: #2b2b2b;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 2rem 0;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 0.5rem;
+        margin-top: 2rem;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      a {
+        color: #5a6e8c;
+        text-decoration: none;
+        border-bottom: 1px dotted #5a6e8c;
+        transition: all 0.3s ease;
+      }
+
+      a:hover {
+        color: #333;
+        border-bottom: 1px solid #333;
+      }
+
+      /* Header & Navigation */
+      header {
+        text-align: center;
+        padding: 2rem 0;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
+      }
+
+      nav a {
+        margin: 0 15px;
+        padding: 5px 10px;
+        border-bottom: none;
+        font-family: "Helvetica", sans-serif;
+        font-size: 1rem;
+      }
+
+      nav a:hover {
+        background-color: rgba(90, 110, 140, 0.1);
+        border-radius: 4px;
+      }
+
+      /* Profile Section */
+      .profile {
+        display: flex;
+        align-items: center;
+        margin: 2rem 0;
+        flex-wrap: wrap;
+      }
+
+      .profile-image {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background-color: #e0d8c3;
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #776e5e;
+        font-size: 1rem;
+      }
+
+      .profile-text {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      /* Projects & Experience */
+      .project,
+      .experience-item {
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e6ded0;
+      }
+
+      .project:last-child,
+      .experience-item:last-child {
+        border-bottom: none;
+      }
+
+      /* Skills */
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 1rem 0;
+      }
+
+      .skill {
+        background-color: #e6ded0;
+        padding: 8px 15px;
+        margin: 5px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+      }
+
+      /* Contact */
+      .contact-info {
+        background-color: #efe9db;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 2rem 0;
+      }
+
+      .contact-info p {
+        margin-bottom: 0.5rem;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        margin-top: 3rem;
+        padding: 1rem 0;
+        color: #776e5e;
+        font-size: 0.9rem;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .profile {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .profile-image {
+          margin-right: 0;
+        }
+
+        nav {
+          flex-wrap: wrap;
+        }
+
+        nav a {
+          margin: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Spyridon Kalogeropoulos</h1>
+        <p>SRE | DevOps | Developer | Human</p>
+      </header>
+
+      <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <section id="about">
+        <h2>About Me</h2>
+        <div class="profile">
+          <div class="profile-text">
+            <p>
+              Hello! I'm Spiros, a passionate SRE and DevOps engineer with a
+              strong background in software development and ML. I like to build
+              solutions that people understand and find useful. I have a knack
+              for simplifying complex problems and creating efficient, scalable
+              systems. My journey in tech has been driven by a desire to break
+              things in order to understand how they work.
+            </p>
+            <p>
+              I believe in the power of simplicity and minimalism in design,
+              focusing on what truly matters to create solutions that users
+              understand.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="experiences">
+        <h2>Experience</h2>
+
+        <div class="project">
+          <h3>Senior Site Reliability Engineer</h3>
+          <p><em>August 2024 - Present</em></p>
+          <p>
+            ● Spearheaded the implementation of advanced monitoring and alerting
+            systems, increasing system reliability and reducing downtime by 35%.
+            ● Optimised Kubernetes (EKS) cluster management, leading to a 25%
+            cost reduction across cloud infrastructure. ● Improved
+            infrastructure scalability through automated T erraform scripts,
+            achieving faster response times for resource scaling by 40%. ●
+            Collaborated with cross-functional teams to refine CI/CD pipelines,
+            resulting in 20% faster deployment cycles. ● Introduced incident
+            response and root cause analysis workflows, cutting resolution times
+            by 30%. ● Mentored junior engineers on cloud infrastructure best
+            practices and reliability engineering.
+          </p>
+        </div>
+
+        <div class="project">
+          <h3>DevOps Engineer</h3>
+          <p><em>March 2018 - December 2019</em></p>
+          <p>
+            ● Automated infrastructure provisioning using Terraform, reducing
+            deployment time by 50%. ● Implemented Ansible playbooks for
+            configuration management, decreasing manual configuration time by
+            25%. ● Managed an EC2 fleet and 20+ EKS clusters, improving
+            performance by 30%. ● Developed Docker containers for application
+            deployment, enhancing portability and consistency across
+            environments. ● Led the development of a full-stack application to
+            automate the creation of EKS clusters through a UI portal.
+          </p>
+        </div>
+      </section>
+      <section id="education">
+        <h2>Education</h2>
+
+        <div class="project">
+          <h3>MSc in Big Data Technologies</h3>
+          <p><em>Glasgow Caledonian, 2020/21, Distinction</em></p>
+          <p>
+            During my degree, I worked with various big data technologies
+            including GCP services for data storage and analysis, as well as
+            Python libraries like Pandas and Numpy. My dissertation focused on
+            using machine learning to predict how a system would perform based
+            on its setup. I used Python for data analysis and model building,
+            then developed a REST API using NodeJS and Express, along with a
+            React + Redux web app to present the results. The project was a
+            valuable hands-on experience in full-stack development, machine
+            learning, and working with large-scale data tools.
+          </p>
+        </div>
+
+        <div class="project">
+          <h3>BSc in Computer Science</h3>
+          <p><em>Glasgow Caledonian, 2016/20, 1st Class Degree</em></p>
+          <p>
+            I studied topics like software engineering, web development, and
+            database design. I built several projects, including a web app using
+            JavaScript and MySQL, which gave me hands-on experience in software
+            development. I also worked on a mobile app using React, NodeJS,
+            Kotlin, and Java, which helped me gain full-stack and some mobile
+            development experience.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+          <h3>Insight Futures</h3>
+          <p>
+            Worked with Doug and his team to create a fullstack environment with
+            real users and real time data analysis. The project helped clients
+            assess their company performance and make informed decisions. I was
+            responsible for the backend development, data analysis, and
+            integration with third-party APIs.
+          </p>
+          <h5>Technologies:</h5>
+          <p>
+            <i>
+              Javascript, Python, React, Redux, NodeJS, Express, MongoDB, Azure,
+              PowerBI, Numpy, Pandas
+            </i>
+          </p>
+          <p><a href="#">View Project</a></p>
+        </div>
+
+        <div class="project">
+          <h3>Datapal (formerly Datayogi)</h3>
+          <p>
+            A back to front solution that provides customers a viable and modern
+            way to manage their data. Customers can upload their data and chose
+            who <i>they</i>
+            want to share it with. The data is stored in a secure and encrypted
+            way, and offers a variety of ways to share it.
+          </p>
+          <h5>Technologies:</h5>
+          <p>
+            <i>Javascript, React, Redux, NodeJS, Express, MongoDB, Azure</i>
+          </p>
+          <p><a href="#">View Project</a></p>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+
+        <div class="skills">
+          <span class="skill">Terraform</span>
+          <span class="skill">Ansible</span>
+          <span class="skill">Kubernetes</span>
+          <span class="skill">Docker</span>
+          <span class="skill">Git</span>
+          <span class="skill">Linux</span>
+          <span class="skill">Monitoring & Logging</span>
+          <span class="skill">Networking</span>
+          <span class="skill">Scripting</span>
+          <span class="skill">CI/CD</span>
+          <span class="skill">AWS</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">React & Redux</span>
+          <span class="skill">Python (ML & Data)</span>
+          <span class="skill">SQL & NoSQL</span>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+
+        <div class="contact-info">
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:ka.spiros97@gmail.com">ka.spiros97@gmail.com</a>
+          </p>
+          <p><strong>Location:</strong> London, UK</p>
+          <p>
+            <strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/in/s-kalog/"
+              >linkedin.com/in/s-kalog/</a
+            >
+          </p>
+          <p>
+            <strong>GitHub:</strong>
+            <a href="https://github.com/KaSpiros">github.com/KaSpiros</a>
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        <p>© 2025 Spyridon Kalogeropoulos. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
